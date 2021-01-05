@@ -53,17 +53,43 @@ section.hero h1 {
   text-align: center;
 }
 
-/* TODO: change to grid */
+/* CONTAINER -> FILTER  */
+section.container .filter-grid {
+  display: grid;
+  grid-template-columns: 881px 1fr 48px;
+  grid-template-rows: 48px;
+  margin-bottom: 24px;
+}
+
 section.container .filter-area {
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
+  padding: 0;
+  color: #a3a3a3;
+  font-size: 24px;
+  letter-spacing: -0.15px;
+  line-height: 48px;
+}
+
+section.container .filter-area li:first-child {
+  color: #616161;
 }
 
 section.container .filter-area a {
   text-decoration: none;
+  background: #ededed;
+  display: block;
   color: inherit;
+  border-radius: 100px;
+  width: 172px;
+  height: 48px;
+}
+
+section.container .filter-area a:active {
+  background: #0ad4fa;
+  color: #ffffff;
 }
 
 section.container li.filter-divider {
@@ -71,4 +97,50 @@ section.container li.filter-divider {
   background: #d9d9d9;
   width: 1px;
   height: 49px;
+}
+
+.horizontal-divider {
+  margin: 0 0 30px 0;
+  background: #d9d9d9;
+  width: 1176px;
+  height: 1px;
+}
+
+/* BUTTONS */
+.btn.page-changer:focus {
+  outline: none;
+}
+
+.btn.page-changer:active {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(34%) saturate(7048%) hue-rotate(146deg)
+    brightness(103%) contrast(96%);
+}
+.btn.page-changer {
+  border: none;
+  border-radius: 100%;
+  background-color: transparent;
+  background-image: url(./assets/icons/arrow-right.svg);
+}
+
+.filter-grid button.btn.page-changer {
+  grid-column-start: 3;
+}
+
+/* CARD GRIDS */
+
+.card-grid {
+  display: grid;
+  grid-template: repeat(4, 279px) / repeat(4, 276px);
+  column-gap: 24px;
+  row-gap: 24px;
+  margin-bottom: 60px;
+}
+
+.card-grid .card {
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section.container .foot.filter-grid {
+  align-self: baseline;
 }
