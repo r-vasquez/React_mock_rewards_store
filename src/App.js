@@ -1,19 +1,12 @@
 import './App.css'
-import { ReactComponent as Logo } from './assets/aerolab-logo.svg'
+import Hero from './components/Hero/Hero'
+import TopHeader from './components/TopHeader/TopHeader'
 
 function App() {
   return (
     <>
-      <header className='head'>
-        <Logo title='Store Logo' className='logo' />
-        <div className='user'>
-          <p>John Kite</p>
-          <p>6700 coins</p>
-        </div>
-      </header>
-      <section className='hero'>
-        <h1>Electronics</h1>
-      </section>
+      <TopHeader />
+      <Hero />
       <section className='container'>
         <hgroup>
           <div className='filter-grid'>
@@ -59,8 +52,8 @@ function App() {
           <div className='card'>hola</div>
           <div className='card'>hola</div>
         </article>
-        <div className='foot filter-grid'>
-          <ul className='filter-area'>
+        <div className='filter-grid'>
+          <ul className='foot filter-area'>
             <li>16 of 32 Products</li>
           </ul>
           <button type='button' className='btn page-changer'></button>

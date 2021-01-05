@@ -1,0 +1,21 @@
+section.hero {
+  background-image: url('../../assets/header-x1.png');
+  max-width: 1440px;
+  height: 412px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  margin-bottom: 67px;
+}
+
+section.hero h1 {
+  position: absolute;
+  margin: 0;
+  top: 284px;
+  left: 132px;
+  font-size: 64px;
+  color: #ffffff;
+}
