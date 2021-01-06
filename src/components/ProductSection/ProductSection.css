@@ -89,11 +89,6 @@ section.container li.filter-divider {
   margin-bottom: 60px;
 }
 
-.card-grid .card {
-  background: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 section.container .foot.filter-area {
   justify-self: baseline;
 }

@@ -1,0 +1,89 @@
+.card-grid .card {
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card Image */
+.card .card-image {
+  position: relative;
+  width: 252px;
+  height: 182px;
+}
+
+/* Redeem Button */
+.card button.redeem-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  padding: 0;
+
+  position: absolute;
+  transform: translate(-100%, 0);
+  left: 100%;
+
+  background: none;
+  cursor: pointer;
+}
+
+.card button.redeem-button:focus {
+  outline: none;
+}
+
+.card button.redeem-button:focus::-moz-focus-inner {
+  border: 0;
+}
+
+.card button.redeem-button svg {
+  outline: none;
+  transition: transform 0.15s;
+}
+
+.card button.redeem-button svg:hover {
+  transform: scale(1.1);
+}
+
+.card button.redeem-button svg:active {
+  transform: scale(1);
+}
+
+/* Horizontal Divider */
+.card-grid .card .small-horizontal-divider {
+  background: #d9d9d9;
+  width: 228px;
+  height: 1px;
+}
+
+/* Product Info */
+.card .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 228px;
+  margin-top: 19px;
+}
+
+.product-info p {
+  margin: 0;
+}
+.product-category {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.0376471px;
+  align-self: baseline;
+
+  color: #a3a3a3;
+}
+
+.product-title {
+  font-size: 18px;
+  line-height: 23px;
+
+  letter-spacing: -0.0423529px;
+
+  color: #616161;
+}
