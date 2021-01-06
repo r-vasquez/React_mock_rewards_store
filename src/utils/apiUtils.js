@@ -7,3 +7,5 @@ export const headers = {
 }
 
 export const getUserInfoURL = 'https://coding-challenge-api.aerolab.co/user/me'
+
+export const getProductsURL = 'https://coding-challenge-api.aerolab.co/products'
