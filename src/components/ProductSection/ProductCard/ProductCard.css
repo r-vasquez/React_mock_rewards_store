@@ -1,4 +1,5 @@
 .card-grid .card {
+  position: relative;
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 12px;
@@ -6,6 +7,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  transition: 0.2s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  transition: 0.2s ease-in;
+  background: linear-gradient(180deg, rgba(10, 212, 250, 0.8) 0%, rgba(37, 187, 241, 0.8) 100%);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.card:hover .small-horizontal-divider,
+.card:hover .product-info {
+  opacity: 0.2;
+}
+
+.card:hover .card-image img {
+  opacity: 0.05;
 }
 
 /* Card Image */
@@ -15,8 +34,12 @@
   height: 182px;
 }
 
-/* Redeem Button */
-.card button.redeem-button {
+.card .card-image img {
+  width: 100%;
+}
+
+/* Buy Button */
+.card button.buy-button {
   width: 42px;
   height: 42px;
   border: none;
@@ -28,26 +51,23 @@
 
   background: none;
   cursor: pointer;
+  z-index: 99;
 }
 
-.card button.redeem-button:focus {
+.card button.buy-button:focus {
   outline: none;
 }
 
-.card button.redeem-button:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.card button.redeem-button svg {
+.card button.buy-button svg {
   outline: none;
   transition: transform 0.15s;
 }
 
-.card button.redeem-button svg:hover {
+.card button.buy-button svg:hover {
   transform: scale(1.1);
 }
 
-.card button.redeem-button svg:active {
+.card button.buy-button svg:active {
   transform: scale(1);
 }
 
@@ -70,6 +90,7 @@
 .product-info p {
   margin: 0;
 }
+
 .product-category {
   font-size: 16px;
   line-height: 20px;
@@ -86,4 +107,61 @@
   letter-spacing: -0.0423529px;
 
   color: #616161;
+}
+
+/* REDEEM PANEL */
+
+.redeem-panel {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redeem-panel .redeem-price {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.redeem-panel .redeem-price p {
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.0847059px;
+  margin: 0;
+}
+
+.redeem-panel .redeem-price svg {
+  transform: translate(3px, 3px);
+}
+
+.redeem-panel button.redeem-button {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.0423529px;
+
+  color: #616161;
+
+  background: #eeeeee;
+  border: none;
+  border-radius: 22px;
+  height: 42px;
+  width: 229px;
+
+  transition: transform 0.15s;
+}
+
+.redeem-panel button.redeem-button:focus {
+  outline: none;
+}
+
+.redeem-panel button.redeem-button:active {
+  transform: scale(0.9);
+}
+
+.redeem-panel button.redeem-button:hover {
+  background: #e0dede;
 }
