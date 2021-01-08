@@ -4,30 +4,44 @@ import { ReactComponent as RedeemButton } from '../../../assets/icons/buy-blue.s
 import { ReactComponent as WhiteRedeemButton } from '../../../assets/icons/buy-white.svg'
 import { ReactComponent as CoinIcon } from '../../../assets/icons/coin.svg'
 
-function ProductCard({ img, name, category, cost }) {
+function ProductCard({ img, name, category, cost, userPoints }) {
   const [isHovered, setIsHovered] = useState(false)
 
   const toggleHover = status => {
     setIsHovered(status)
   }
 
+  let ButtonToDisplay = ''
+
+  const isFund = userPoints - cost > 0
+
+  if (isFund) {
+    ButtonToDisplay = (
+      <button className='buy-button'>{isHovered ? <WhiteRedeemButton /> : <RedeemButton />}</button>
+    )
+  } else
+    ButtonToDisplay = (
+      <button className='no-funds'>
+        <span> You need {cost - userPoints} </span>
+        <CoinIcon />
+      </button>
+    )
+
   return (
     <div
-      className='card'
+      className={isFund ? 'card fund' : 'card'}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}>
       <div className='card-image'>
         <img src={img.url} alt='dell x1' />
-        <button className='buy-button'>
-          {isHovered ? <WhiteRedeemButton /> : <RedeemButton />}
-        </button>
+        {ButtonToDisplay}
       </div>
       <div className='small-horizontal-divider'></div>
       <div className='product-info'>
         <p className='product-category'>{category}</p>
         <p className='product-title'>{name}</p>
       </div>
-      {isHovered ? (
+      {isHovered && isFund ? (
         <div className='redeem-panel'>
           <div className='redeem-price'>
             <p>{cost}</p>

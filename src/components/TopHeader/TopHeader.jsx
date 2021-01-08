@@ -1,31 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import './TopHeader.css'
 import { ReactComponent as Logo } from '../../assets/aerolab-logo.svg'
 import coinIcon from '../../assets/icons/coin.svg'
-import './TopHeader.css'
-import { getUserInfoURL } from '../../utils/apiUtils.js'
-import { useApi, apiStates } from '../../utils/useApi'
+import { AppContext } from '../../utils/ContextProvider'
+import { apiStates } from '../../utils/useApi'
 
 function TopHeader() {
-  const { state, error, data } = useApi(getUserInfoURL)
-
+  const { state: userState, error: userError, data: userData } = useContext(AppContext)
   return (
     <header className='head'>
       <Logo title='Store Logo' className='logo' />
-      <div className='user'>{handleLoading(state, error, data)}</div>
+      <div className='user'>{handleLoading(userState, userError, userData)}</div>
     </header>
   )
 }
 
-function handleLoading(state, error, data) {
-  switch (state) {
+function handleLoading(userState, userError, { name, points }) {
+  switch (userState) {
     case apiStates.ERROR:
-      return <p>ERROR: {error || 'General error'}</p>
+      return <p>ERROR: {userError || 'General error'}</p>
     case apiStates.SUCCESS:
       return (
         <>
-          <p>{data.name}</p>
+          <p>{name}</p>
           <div className='point-info'>
-            <p>{data.points}</p>
+            <p>{points}</p>
             <img src={coinIcon} alt='coins' />
           </div>
         </>

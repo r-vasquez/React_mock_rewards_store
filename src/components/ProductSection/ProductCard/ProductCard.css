@@ -11,19 +11,19 @@
   transition: 0.2s ease-out;
 }
 
-.card:hover {
+.card.fund:hover {
   transform: translateY(-12px);
   transition: 0.2s ease-in;
   background: linear-gradient(180deg, rgba(10, 212, 250, 0.8) 0%, rgba(37, 187, 241, 0.8) 100%);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.card:hover .small-horizontal-divider,
-.card:hover .product-info {
+.card.fund:hover .small-horizontal-divider,
+.card.fund:hover .product-info {
   opacity: 0.2;
 }
 
-.card:hover .card-image img {
+.card.fund:hover .card-image img {
   opacity: 0.05;
 }
 
@@ -51,7 +51,6 @@
 
   background: none;
   cursor: pointer;
-  z-index: 99;
 }
 
 .card button.buy-button:focus {
@@ -69,6 +68,35 @@
 
 .card button.buy-button svg:active {
   transform: scale(1);
+}
+
+/* NoFunds Button */
+
+.card button.no-funds {
+  width: 142px;
+  height: 42px;
+  border: none;
+  padding: 0;
+
+  position: absolute;
+  transform: translate(-100%, 0);
+  left: 100%;
+
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border-radius: 100px;
+  background: #616161;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.0329412px;
+  color: #ffffff;
+}
+
+.card button.no-funds > svg,
+.card button.no-funds > span {
+  vertical-align: middle;
 }
 
 /* Horizontal Divider */
