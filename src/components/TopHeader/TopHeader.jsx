@@ -6,7 +6,9 @@ import { AppContext } from '../../utils/ContextProvider'
 import { apiStates } from '../../utils/useApi'
 
 function TopHeader() {
-  const { state: userState, error: userError, data: userData } = useContext(AppContext)
+  const {
+    userState: { state: userState, error: userError, data: userData }
+  } = useContext(AppContext)
   return (
     <header className='head'>
       <Logo title='Store Logo' className='logo' />

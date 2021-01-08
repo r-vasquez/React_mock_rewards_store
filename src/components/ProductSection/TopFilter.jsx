@@ -1,11 +1,11 @@
 import React from 'react'
 
-function TopFilter() {
+function TopFilter({ totalProducts }) {
   return (
     <hgroup>
       <div className='filter-grid'>
         <ul className='filter-area'>
-          <li>16 of 32 Products</li>
+          <li>16 of {totalProducts} Products</li>
           <li className='filter-divider'></li>
           <li>Sort by:</li>
           <li>
