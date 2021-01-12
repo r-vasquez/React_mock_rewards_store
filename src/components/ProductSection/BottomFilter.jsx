@@ -1,12 +1,19 @@
 import React from 'react'
 
-function BottomFilter({ totalProducts }) {
+function BottomFilter({ totalProducts, next, prev, itemsPerPage, currentPage }) {
   return (
     <div className='filter-grid'>
       <ul className='foot filter-area'>
-        <li>16 of {totalProducts} Products</li>
+        <li>
+          {itemsPerPage * currentPage} of {totalProducts} Products
+        </li>
       </ul>
-      <button type='button' className='btn page-changer'></button>
+      {currentPage > 1 ? (
+        <button type='button' className='btn page-changer prev' onClick={() => prev()}></button>
+      ) : (
+        ''
+      )}
+      <button type='button' className='btn page-changer next' onClick={() => next()}></button>
     </div>
   )
 }

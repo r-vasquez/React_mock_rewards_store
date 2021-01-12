@@ -1,30 +1,31 @@
 import React from 'react'
 
-function TopFilter({ totalProducts }) {
+function TopFilter({ totalProducts, next, prev, itemsPerPage, currentPage, setFilterType }) {
   return (
     <hgroup>
       <div className='filter-grid'>
         <ul className='filter-area'>
-          <li>16 of {totalProducts} Products</li>
+          <li>
+            {itemsPerPage * currentPage} of {totalProducts} Products
+          </li>
           <li className='filter-divider'></li>
           <li>Sort by:</li>
           <li>
-            <a href='/' role='button'>
-              Most Recent
-            </a>
+            <button onClick={() => setFilterType('RECENT')}>Most Recent</button>
           </li>
           <li>
-            <a href='/' role='button'>
-              Lowest Price
-            </a>
+            <button onClick={() => setFilterType('LOWEST')}>Lowest Price</button>
           </li>
           <li>
-            <a href='/' role='button'>
-              Highest Price
-            </a>
+            <button onClick={() => setFilterType('HIGHEST')}>Highest Price</button>
           </li>
         </ul>
-        <button type='button' className='btn page-changer'></button>
+        {currentPage > 1 ? (
+          <button type='button' className='btn page-changer prev' onClick={() => prev()}></button>
+        ) : (
+          ''
+        )}
+        <button type='button' className='btn page-changer next' onClick={() => next()}></button>
       </div>
     </hgroup>
   )
