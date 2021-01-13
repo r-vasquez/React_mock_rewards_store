@@ -27,13 +27,19 @@ header.head .user .point-info {
   align-items: center;
   justify-content: center;
   background-color: #ededed;
+  border: none;
   border-radius: 100px;
   width: 103px;
   height: 48px;
-}
+  cursor: pointer;
 
-.point-info p {
-  margin-left: 6px;
+  font-size: 20px;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  color: #616161;
+  letter-spacing: -0.15px;
+  padding-left: 16px;
 }
 
 header.head .user .point-info img {

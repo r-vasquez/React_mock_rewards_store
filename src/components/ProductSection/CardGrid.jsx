@@ -6,13 +6,19 @@ function CardGrid({ productList = [] }) {
   const {
     userState: {
       data: { points: userPoints }
-    }
+    },
+    setIsOpenPoints
   } = useContext(AppContext)
 
   return (
     <article className='card-grid'>
       {productList.map(product => (
-        <ProductCard {...product} key={product._id} userPoints={userPoints} />
+        <ProductCard
+          {...product}
+          key={product._id}
+          userPoints={userPoints}
+          setIsOpenPoints={setIsOpenPoints}
+        />
       ))}
     </article>
   )
