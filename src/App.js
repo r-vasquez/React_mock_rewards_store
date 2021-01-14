@@ -1,5 +1,6 @@
 import Hero from './components/Hero/Hero'
 import ModalAddPoints from './components/Modal/ModalAddPoints'
+import ModalHistory from './components/Modal/ModalHistory'
 import Portal from './components/Modal/Portal'
 import ProductSection from './components/ProductSection/ProductSection'
 import TopHeader from './components/TopHeader/TopHeader'
@@ -13,6 +14,7 @@ function App() {
       <ProductSection />
       <Portal>
         <ModalAddPoints />
+        <ModalHistory />
       </Portal>
     </AppProvider>
   )

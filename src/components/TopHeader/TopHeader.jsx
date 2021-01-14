@@ -8,17 +8,20 @@ import { apiStates } from '../../utils/useApi'
 function TopHeader() {
   const {
     userState: { state: userState, error: userError, data: userData },
-    setIsOpenPoints
+    setIsOpenPoints,
+    setIsOpenHistory
   } = useContext(AppContext)
   return (
     <header className='head'>
       <Logo title='Store Logo' className='logo' />
-      <div className='user'>{handleLoading(userState, userError, userData, setIsOpenPoints)}</div>
+      <div className='user'>
+        {handleLoading(userState, userError, userData, setIsOpenPoints, setIsOpenHistory)}
+      </div>
     </header>
   )
 }
 
-function handleLoading(userState, userError, { name, points }, setIsOpenPoints) {
+function handleLoading(userState, userError, { name, points }, setIsOpenPoints, setIsOpenHistory) {
   switch (userState) {
     case apiStates.ERROR:
       return <p>ERROR: {userError || 'General error'}</p>
@@ -26,9 +29,12 @@ function handleLoading(userState, userError, { name, points }, setIsOpenPoints) 
       return (
         <>
           <p>{name}</p>
-          <button className='point-info' onClick={() => setIsOpenPoints(true)}>
+          <button className='btn-header point-info' onClick={() => setIsOpenPoints(true)}>
             {points}
             <img src={coinIcon} alt='coins' />
+          </button>
+          <button className='btn-header' onClick={() => setIsOpenHistory(true)}>
+            History
           </button>
         </>
       )

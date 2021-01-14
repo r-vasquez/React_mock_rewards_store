@@ -12,15 +12,15 @@ function ModalAddPoints() {
 
   const coinOptions = [1000, 5000, 7500]
 
-  const rawBody = `{ "amount": ${coins} }`
-  let requestOptions = postRequestOptions(rawBody)
-
   const redeemCoins = () => {
+    const rawBody = `{ "amount": ${coins} }`
+    const requestOptions = postRequestOptions(rawBody)
+    requestOptions.mode = 'cors'
+
     fetch(postRedeemCoinsURL, requestOptions)
       .then(response => response.text())
       .then(result => {
         const resultObj = JSON.parse(result)
-        console.log(resultObj)
         alert(`You have redeemed: ${coins} coins \nYou have now: ${resultObj['New Points']} coins`)
         window.location.reload()
       })

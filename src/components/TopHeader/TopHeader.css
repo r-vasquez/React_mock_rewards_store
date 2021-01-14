@@ -7,12 +7,13 @@ header.head {
 }
 
 header.head .user {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 5px;
   justify-content: space-between;
   align-items: center;
-  width: 215px;
-  height: 48px;
-  margin-right: 42px;
+  margin-right: 12px;
 }
 
 header.head .user p {
@@ -22,16 +23,13 @@ header.head .user p {
   font-size: 24px;
 }
 
-header.head .user .point-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ededed;
+header.head .user .btn-header {
   border: none;
   border-radius: 100px;
   width: 103px;
   height: 48px;
   cursor: pointer;
+  background-color: #ededed;
 
   font-size: 20px;
   font-family: Source Sans Pro;
@@ -39,6 +37,12 @@ header.head .user .point-info {
   font-weight: normal;
   color: #616161;
   letter-spacing: -0.15px;
+}
+
+header.head .user .point-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-left: 16px;
 }
 

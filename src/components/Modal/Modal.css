@@ -53,6 +53,9 @@ button.close-modal:focus {
   flex-direction: column;
   align-items: center;
   color: #616161;
+  padding: 15px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 .modal-content button {

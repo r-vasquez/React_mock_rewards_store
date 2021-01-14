@@ -10,7 +10,11 @@ export const getUserInfoURL = 'https://coding-challenge-api.aerolab.co/user/me'
 
 export const getProductsURL = 'https://coding-challenge-api.aerolab.co/products'
 
+export const getUserHistoryURL = 'https://coding-challenge-api.aerolab.co/user/history'
+
 export const postRedeemCoinsURL = 'https://coding-challenge-api.aerolab.co/user/points'
+
+export const postRedeemItemURL = 'https://coding-challenge-api.aerolab.co/redeem'
 
 export const postRequestOptions = rawBody => {
   let myHeaders = new Headers()
@@ -24,7 +28,6 @@ export const postRequestOptions = rawBody => {
   return {
     method: 'POST',
     headers: myHeaders,
-    mode: 'cors',
     body: rawBody,
     redirect: 'follow'
   }

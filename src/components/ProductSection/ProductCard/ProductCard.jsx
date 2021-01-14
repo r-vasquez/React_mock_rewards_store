@@ -4,7 +4,7 @@ import { ReactComponent as RedeemButton } from '../../../assets/icons/buy-blue.s
 import { ReactComponent as WhiteRedeemButton } from '../../../assets/icons/buy-white.svg'
 import { ReactComponent as CoinIcon } from '../../../assets/icons/coin.svg'
 
-function ProductCard({ img, name, category, cost, userPoints, setIsOpenPoints }) {
+function ProductCard({ img, name, category, cost, userPoints, _id, setIsOpenPoints, redeemItem }) {
   const [isHovered, setIsHovered] = useState(false)
 
   const toggleHover = status => {
@@ -12,9 +12,7 @@ function ProductCard({ img, name, category, cost, userPoints, setIsOpenPoints })
   }
 
   let ButtonToDisplay = ''
-
   const isFund = userPoints - cost >= 0
-
   if (isFund) {
     ButtonToDisplay = (
       <button className='buy-button' aria-label='redeem-button'>
@@ -49,7 +47,9 @@ function ProductCard({ img, name, category, cost, userPoints, setIsOpenPoints })
             <p>{cost}</p>
             <CoinIcon />
           </div>
-          <button className='redeem-button'>Redeem Now</button>
+          <button className='redeem-button' onClick={() => redeemItem(_id)}>
+            Redeem Now
+          </button>
         </div>
       ) : (
         ''
