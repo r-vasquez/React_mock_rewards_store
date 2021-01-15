@@ -26,7 +26,7 @@ function ModalHistory() {
                 <p>{purchase.name}</p>
                 <ul>
                   <li>Cost: {purchase.cost}</li>
-                  <li>Purchase Date: {purchase.createDate}</li>
+                  <li>Purchase Date: {purchase.createDate.slice(0, 10)}</li>
                   <li>
                     Image for reference{' '}
                     <a target='_blank' rel='noreferrer' href={purchase.img.url}>

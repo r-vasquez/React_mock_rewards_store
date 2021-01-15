@@ -14,6 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  min-width: 400px;
   padding: 50px;
   z-index: 1000;
 }
@@ -127,4 +128,8 @@ select {
 /* Transition */
 .select:hover::after {
   color: #0ad4fa;
+}
+
+.modal-content ul {
+  padding: 0;
 }
