@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/React_mock_rewards_store/static/css/main.a73ca2d9.chunk.css",
+    "main.js": "/React_mock_rewards_store/static/js/main.ef3415b7.chunk.js",
+    "main.js.map": "/React_mock_rewards_store/static/js/main.ef3415b7.chunk.js.map",
+    "runtime-main.js": "/React_mock_rewards_store/static/js/runtime-main.4b4f8489.js",
+    "runtime-main.js.map": "/React_mock_rewards_store/static/js/runtime-main.4b4f8489.js.map",
+    "static/js/2.1bb077c8.chunk.js": "/React_mock_rewards_store/static/js/2.1bb077c8.chunk.js",
+    "static/js/2.1bb077c8.chunk.js.map": "/React_mock_rewards_store/static/js/2.1bb077c8.chunk.js.map",
+    "static/js/3.ccaf2d13.chunk.js": "/React_mock_rewards_store/static/js/3.ccaf2d13.chunk.js",
+    "static/js/3.ccaf2d13.chunk.js.map": "/React_mock_rewards_store/static/js/3.ccaf2d13.chunk.js.map",
+    "index.html": "/React_mock_rewards_store/index.html",
+    "static/css/main.a73ca2d9.chunk.css.map": "/React_mock_rewards_store/static/css/main.a73ca2d9.chunk.css.map",
+    "static/js/2.1bb077c8.chunk.js.LICENSE.txt": "/React_mock_rewards_store/static/js/2.1bb077c8.chunk.js.LICENSE.txt",
+    "static/media/aerolab-logo.0a8fb170.svg": "/React_mock_rewards_store/static/media/aerolab-logo.0a8fb170.svg",
+    "static/media/ProductSection.css": "/React_mock_rewards_store/static/media/arrow-right.3306c112.svg",
+    "static/media/buy-blue.c5c4f01c.svg": "/React_mock_rewards_store/static/media/buy-blue.c5c4f01c.svg",
+    "static/media/buy-white.9b6e6567.svg": "/React_mock_rewards_store/static/media/buy-white.9b6e6567.svg",
+    "static/media/coin.b8bc711d.svg": "/React_mock_rewards_store/static/media/coin.b8bc711d.svg",
+    "static/media/Hero.css": "/React_mock_rewards_store/static/media/header-x1.b6f067c6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b4f8489.js",
+    "static/js/2.1bb077c8.chunk.js",
+    "static/css/main.a73ca2d9.chunk.css",
+    "static/js/main.ef3415b7.chunk.js"
+  ]
+}
