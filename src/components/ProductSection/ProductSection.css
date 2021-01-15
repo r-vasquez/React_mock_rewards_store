@@ -92,6 +92,7 @@ section.container li.filter-divider {
   border-radius: 100%;
   background-color: transparent;
   background-image: url('../../assets/icons/arrow-left.svg');
+  background-repeat: no-repeat;
 }
 
 .filter-grid .btn.page-changer.prev {
