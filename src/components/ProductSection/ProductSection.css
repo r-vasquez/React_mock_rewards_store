@@ -83,6 +83,7 @@ section.container li.filter-divider {
   border: none;
   background-color: transparent;
   background-image: url('../../assets/icons/arrow-right.svg');
+  background-repeat: no-repeat;
 }
 
 .btn.page-changer.prev {
