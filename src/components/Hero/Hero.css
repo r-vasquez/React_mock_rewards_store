@@ -18,3 +18,16 @@ section.hero h1 {
   font-size: 64px;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  section.hero {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+  section.hero h1 {
+    top: 50%;
+    left: 5%;
+    font-size: 50px;
+  }
+}

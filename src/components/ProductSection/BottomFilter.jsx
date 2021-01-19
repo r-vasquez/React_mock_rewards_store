@@ -2,12 +2,12 @@ import React from 'react'
 
 function BottomFilter({ totalProducts, next, prev, itemsPerPage, currentPage }) {
   return (
-    <div className='filter-grid'>
-      <ul className='foot filter-area'>
-        <li>
+    <div className='foot filter-grid'>
+      <div className='foot filter-area'>
+        <p>
           {itemsPerPage * currentPage} of {totalProducts} Products
-        </li>
-      </ul>
+        </p>
+      </div>
       {currentPage > 1 ? (
         <button
           type='button'

@@ -133,3 +133,10 @@ select {
 .modal-content ul {
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  .modal {
+    min-width: 300px;
+    padding: 20px;
+  }
+}
